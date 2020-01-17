@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    >
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="64dp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="64dp"
+        />
+
+    <Button
+        android:id="@+id/test_spawning_activities_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Test spawning activities"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toTopOf="@id/test_spawning_fragments_using_activity_lifecycle_btn"
+        app:layout_constraintLeft_toRightOf="@id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@id/guideline_right"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <Button
+        android:id="@+id/test_spawning_fragments_using_activity_lifecycle_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Test spawning fragments using activity lifecycle"
+        app:layout_constraintBottom_toTopOf="@id/test_spawning_fragments_using_fragment_lifecycle_btn"
+        app:layout_constraintLeft_toRightOf="@id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@id/test_spawning_activities_btn"
+        />
+
+    <Button
+        android:id="@+id/test_spawning_fragments_using_fragment_lifecycle_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Test spawning fragments using fragment lifecycle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/guideline_left"
+        app:layout_constraintRight_toLeftOf="@id/guideline_right"
+        app:layout_constraintTop_toBottomOf="@id/test_spawning_fragments_using_activity_lifecycle_btn"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
